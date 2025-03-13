@@ -3,7 +3,7 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Manual de Procedimientos Canvas-GPR</title>
+      <title>Procedimiento para la Validación de Calificación</title>
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
       <style>
          * {
@@ -29,15 +29,15 @@
             margin: 0;
             padding: 0;
             padding-top: 80px;
-            line-height: 1.4;
          }
 
          header {
             background: var(--primary-color);
             color: var(--white-color);
-            padding: 15px;
-            text-align: center;
-            box-shadow: var(--box-shadow);
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             border-bottom: 4px solid var(--secondary-color);
             position: fixed;
             top: 0;
@@ -46,82 +46,70 @@
             z-index: 1000;
          }
 
-         .header-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: 0 auto;
-         }
-
-         .logo {
-            flex: 0 0 100px;
-         }
-
          .logo img {
-            width: 100%;
-            height: auto;
+            height: 50px;
          }
 
-         header h1 {
-            flex: 1;
+         .title {
+            flex-grow: 1;
+            text-align: center;
             font-size: 1.7em;
             font-weight: bold;
-            color: var(--white-color);
-            text-align: center;
          }
 
          main {
             padding: 30px;
             max-width: 1000px;
-            margin: 40px auto;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+            margin: 80px auto 0;
          }
 
-         .section {
+         .card {
             background-color: var(--white-color);
             border-radius: var(--border-radius);
             padding: 20px;
             box-shadow: var(--box-shadow);
-            border: 1px solid #E0E0E0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            margin-bottom: 20px;
          }
 
-         h2 {
-            text-align: center;
+         .card h2 {
             color: var(--primary-color);
             font-size: 1.5em;
             margin-bottom: 15px;
          }
 
-         .clickable {
-            color: var(--primary-color);
-            font-weight: bold;
-            text-decoration: underline;
-            cursor: pointer;
-         }
-
-         img {
-            width: 100%;
-            max-width: 600px;
-            margin: 15px auto;
-            display: block;
-            border-radius: 8px;
-         }
-
          .authors {
             background: #F6F6F6;
-            border-radius: 3px;
+            border-radius: var(--border-radius);
             padding: 10px;
-            margin-top: 20px;
-            text-align: center;
+            text-align: right;
+            min-width: 200px;
          }
 
          .authors p {
             margin: 5px 0;
             font-size: 0.9em;
-            color: #8B0000;
+            color: var(--primary-color);
+            font-weight: bold;
+         }
+
+         details {
+            background-color: var(--white-color);
+            border-radius: var(--border-radius);
+            padding: 15px;
+            margin-bottom: 10px;
+            box-shadow: var(--box-shadow);
+            cursor: pointer;
+            font-size: 1.2em;
+         }
+
+         summary {
+            font-weight: bold;
+            color: var(--primary-color);
+            cursor: pointer;
          }
 
          footer {
@@ -133,65 +121,45 @@
             border-top: 4px solid var(--secondary-color);
             margin-top: 20px;
          }
-
-         @media (max-width: 768px) {
-            main {
-               padding: 20px;
-               margin: 100px auto;
-            }
-
-            .header-container {
-               flex-direction: column;
-               align-items: center;
-            }
-
-            .logo img {
-               max-width: 140px;
-            }
-
-            header h1 {
-               font-size: 1.5em;
-            }
-         }
       </style>
    </head>
    <body>
       <header>
-         <div class="header-container">
-            <div class="logo">
-               <img src="https://raw.githubusercontent.com/1neodat/SAIC/main/UIDE_logo-02.png" alt="Logo Universidad Internacional del Ecuador">
-            </div>
-            <h1>Manual de Procedimientos Canvas-GPR</h1>
+         <div class="logo">
+            <img src="https://raw.githubusercontent.com/1neodat/SAIC/main/UIDE_logo-02.png" alt="Logo Universidad Internacional del Ecuador">
          </div>
+         <div class="title">Procedimiento para la Validación de Calificación</div>
       </header>
       <main>
-         <div class="section">
-            <h2>Descripción del Manual</h2>
-            <p>
-               Este manual establece los procedimientos y requisitos para la validación de calificaciones dentro de la plataforma 
-               Canvas y el sistema de control GPR. Su objetivo es estandarizar el proceso, garantizar el cumplimiento de normativas 
-               académicas y facilitar la evaluación de docentes y estudiantes.
-            </p>
+         <div class="card">
+            <div>
+               <h2>Descripción del Procedimiento</h2>
+               <p>
+                  Este procedimiento establece los pasos y requisitos para la validación de calificaciones en la plataforma Canvas, 
+                  aplicación de control GPR y el uso del sílabo, asegurando el cumplimiento de normativas académicas y estándares institucionales.
+               </p>
+            </div>
+            <div class="authors">
+               <p><b>Desarrollado por:</b></p>
+               <p>Silvia Jaramillo</p>
+               <p>Darío Hurtado</p>
+            </div>
          </div>
 
-         <div class="section">
-            <h2>Página de Inicio</h2>
-            <p><span class="clickable" onclick="window.location='detalle_bienvenida.html'">Bienvenida</span>: Se debe subir una foto del docente y palabras de bienvenida a los estudiantes. <strong>ES OBLIGATORIO</strong></p>
-            <img src="ruta_de_la_imagen/foto_docente.jpg" alt="Foto del Docente">
-         </div>
-
-         <div class="section">
-            <h2>Semana 0</h2>
-            <p><span class="clickable" onclick="window.location='detalle_calendario.html'">Calendario Académico</span>: Viene configurado desde matriz. <strong>ES OBLIGATORIO</strong></p>
-            <p><span class="clickable" onclick="window.location='detalle_silabo.html'">Sílabo</span>: Subir legalizado. <strong>ES OBLIGATORIO</strong></p>
-            <img src="ruta_de_la_imagen/silabo.jpg" alt="Sílabo legalizado">
-         </div>
-
-         <div class="section authors">
-            <p><b>Desarrollado por:</b></p>
-            <p>Equipo de Gestión Académica</p>
-            <p>Darío Hurtado</p>
-         </div>
+         <details>
+            <summary>Página de Inicio</summary>
+            <p>Indicaciones generales sobre la carga de información en Canvas.</p>
+         </details>
+         
+         <details>
+            <summary>Semana 0</summary>
+            <p>Detalles sobre el calendario académico, sílabo y planificación de tutorías.</p>
+         </details>
+         
+         <details>
+            <summary>Semanas 1 a 16</summary>
+            <p>Seguimiento de evaluaciones, notas y confrontación de calificaciones.</p>
+         </details>
       </main>
       <footer>
          © 2024 - Todos los derechos reservados
