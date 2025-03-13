@@ -56,7 +56,30 @@
             font-size: 1.3em;
             font-weight: bold;
          }
-
+         
+         table {
+          width: 100%;
+          border-collapse: collapse;
+          margin: 20px 0;
+          font-size: 16px;
+          text-align: left;
+         }
+         
+         th, td {
+             border: 1px solid #ccc;
+             padding: 10px;
+         }
+         
+         th {
+             background-color: #8b0000;
+             color: white;
+             text-align: center;
+         }
+         
+         td b {
+             color: #8b0000;
+         }
+                  
          @media (max-width: 700px) {
             header {
                flex-direction: column;
@@ -170,7 +193,33 @@
             <div class="image-container">
                <img src="Inicio.png" alt="Imagen de la Página de Inicio">
             </div>
-            <p>Indicaciones generales sobre la carga de información en Canvas.</p>
+            <table>
+    <thead>
+        <tr>
+            <th>DOCENTE</th>
+            <th>PAR EVALUADOR</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><b>CAFETERIA: NO ES OBLIGATORIO</b></td>
+            <td>No es calificado</td>
+        </tr>
+        <tr>
+            <td><b>INDICACIONES GENERALES:</b> El docente puede subir información, como formatos, hojas membretadas, normas APA, entre otros. <b>ES OBLIGATORIO</b></td>
+            <td>No es calificado</td>
+        </tr>
+        <tr>
+            <td><b>BIENVENIDA:</b> Se debe subir foto del docente, no caritas, paisajes, entre otros, y dar palabras de bienvenida a los estudiantes. <b>ES OBLIGATORIO</b></td>
+            <td>Será calificado, en el caso de no observar en el CANVAS, debe indicar en observaciones que no cuenta con ese recurso</td>
+        </tr>
+        <tr>
+            <td><b>GRABACIONES:</b> Se debe activar el link docentes TC. <b>ES OBLIGATORIO</b></td>
+            <td>Será calificado, en el caso de no observar en el CANVAS, debe indicar en observaciones que no cuenta con ese recurso</td>
+        </tr>
+    </tbody>
+</table>
+
          </details>
          
          <details>
