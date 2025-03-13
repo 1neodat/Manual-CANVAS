@@ -1,94 +1,173 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manual de Procedimientos Canvas-GPR</title>
-</head>
-<body>
-    <h1>MANUAL DE PROCEDIMIENTOS CANVAS-GPR</h1>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Manual de Procedimientos Canvas-GPR</title>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+      <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+         }
 
-    <h2>PROCEDIMIENTO PARA LA VALIDACIÓN DE CALIFICACIÓN</h2>
-    <p><strong>PLATAFORMA CANVAS, APLICACIÓN DE CONTROL GPR, SÍLABO</strong></p>
+         :root {
+            --primary-color: #8b0000;
+            --secondary-color: #f6a700;
+            --background-color: #F4F6F8;
+            --text-color: #333333;
+            --white-color: #FFFFFF;
+            --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            --border-radius: 12px;
+         }
 
-    <h2>PÁGINA DE INICIO</h2>
+         body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            padding-top: 80px;
+            line-height: 1.4;
+         }
 
-    <h3>DOCENTE</h3>
-    <h3>PAR EVALUADOR</h3>
-    <h3>CAFETERÍA: NO ES OBLIGATORIO</h3>
-    <p>No es calificado</p>
+         header {
+            background: var(--primary-color);
+            color: var(--white-color);
+            padding: 15px;
+            text-align: center;
+            box-shadow: var(--box-shadow);
+            border-bottom: 4px solid var(--secondary-color);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+         }
 
-    <h3>INDICACIONES GENERALES</h3>
-    <p>El docente puede subir información, como formatos, hojas membretadas, normas APA, entre otros. <strong>ES OBLIGATORIO</strong></p>
-    <p>No es calificado</p>
+         header h1 {
+            font-size: 1.7em;
+            margin: 5px 0;
+            font-weight: bold;
+            color: var(--white-color);
+         }
 
-    <h3>BIENVENIDA</h3>
-    <p>Se debe subir foto del docente, no caritas, paisajes, entre otros, y dar palabras de bienvenida a los estudiantes. <strong>ES OBLIGATORIO</strong></p>
-    <p>Será calificado. En el caso de no observar en CANVAS, debe indicar en observaciones que no cuenta con ese recurso.</p>
-    <!-- Aquí debe colocar una imagen del docente -->
-    <img src="ruta_de_la_imagen/foto_docente.jpg" alt="Foto del docente">
+         main {
+            padding: 30px;
+            max-width: 1000px;
+            margin: 40px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+         }
 
-    <h3>GRABACIONES</h3>
-    <p>Se debe activar el link docentes TC. <strong>ES OBLIGATORIO</strong></p>
-    <p>Será calificado. En el caso de no observar en CANVAS, debe indicar en observaciones que no cuenta con ese recurso.</p>
-    <!-- Aquí puede colocar una imagen representativa de la activación del link -->
-    <img src="ruta_de_la_imagen/grabaciones_canvas.jpg" alt="Grabaciones en Canvas">
+         .section {
+            background-color: var(--white-color);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: var(--box-shadow);
+            border: 1px solid #E0E0E0;
+         }
 
-    <h2>SEMANA 0</h2>
+         h2 {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 1.5em;
+            margin-bottom: 15px;
+         }
 
-    <h3>CALENDARIO ACADÉMICO, REGLAMENTO ESTUDIANTIL</h3>
-    <p>Viene configurado desde matriz. <strong>ES OBLIGATORIO</strong></p>
-    <p>No es calificado</p>
-    <!-- Puede colocar una imagen del calendario académico -->
-    <img src="ruta_de_la_imagen/calendario_academico.jpg" alt="Calendario Académico">
+         details {
+            background-color: var(--white-color);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: var(--box-shadow);
+            cursor: pointer;
+         }
 
-    <h3>GUÍA PARA EL MANEJO DE CLASES</h3>
-    <p>Subir el documento que es enviado por el Director/Coordinador Académico de Carrera/Escuela. <strong>ES OBLIGATORIO</strong></p>
-    <p>No es calificado</p>
+         summary {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: var(--primary-color);
+         }
 
-    <h3>SÍLABO</h3>
-    <p>Subir legalizado. <strong>ES OBLIGATORIO</strong></p>
-    <p>Será calificado. En el caso de no observar en CANVAS, debe indicar en observaciones que no cuenta con ese recurso.</p>
-    <!-- Puede colocar una imagen de un sílabo legalizado -->
-    <img src="ruta_de_la_imagen/silabo.jpg" alt="Sílabo legalizado">
+         summary:hover {
+            color: #5e2129;
+         }
 
-    <h3>RECURSOS BIBLIOGRÁFICOS</h3>
-    <p>Subir la bibliografía que consta en el sílabo como básica y complementaria. <strong>ES OBLIGATORIO</strong></p>
-    <p>Será calificado. En el caso de no observar en CANVAS, debe indicar en observaciones que no cuenta con ese recurso.</p>
-    <!-- Puede colocar una imagen representativa de bibliografía -->
-    <img src="ruta_de_la_imagen/bibliografia.jpg" alt="Bibliografía">
+         .clickable {
+            color: var(--primary-color);
+            font-weight: bold;
+            text-decoration: underline;
+            cursor: pointer;
+         }
 
-    <h2>SEMANAS 1 A LA 16</h2>
+         img {
+            width: 100%;
+            max-width: 600px;
+            margin: 15px auto;
+            display: block;
+            border-radius: 8px;
+         }
 
-    <h3>SEMANA 6</h3>
-    <p>Indicar el tema o temas a tratar de acuerdo al sílabo. <strong>ES OBLIGATORIO</strong></p>
-    <p>Será calificado. En el caso de no observar en CANVAS, debe indicar en observaciones que no cuenta con ese recurso.</p>
-    <!-- Puede colocar una imagen ilustrativa de temas del sílabo -->
-    <img src="ruta_de_la_imagen/temas_silabo.jpg" alt="Temas del sílabo">
+         footer {
+            background-color: #012e46;
+            color: var(--white-color);
+            padding: 15px;
+            text-align: center;
+            font-size: 0.9em;
+            border-top: 4px solid var(--secondary-color);
+            margin-top: 20px;
+         }
 
-    <h3>RECURSOS DE APRENDIZAJE</h3>
-    <p>Subir material como diapositivas, videos, herramientas de gamificación, entre otros. En las semanas 5, 10 y 16 no es necesario. <strong>ES OBLIGATORIO</strong></p>
-    <p>Será calificado. En el caso de no observar en CANVAS, debe indicar en observaciones que no cuenta con ese recurso.</p>
-    <!-- Puede colocar una imagen de diapositivas o material didáctico -->
-    <img src="ruta_de_la_imagen/recursos_aprendizaje.jpg" alt="Recursos de Aprendizaje">
+         @media (max-width: 768px) {
+            main {
+               padding: 20px;
+               margin: 100px auto;
+            }
+         }
+      </style>
+   </head>
+   <body>
+      <header>
+         <h1>Manual de Procedimientos Canvas-GPR</h1>
+      </header>
+      <main>
+         <div class="section">
+            <h2>Página de Inicio</h2>
+            <p><span class="clickable" onclick="window.location='detalle_bienvenida.html'">Bienvenida</span>: Se debe subir una foto del docente y dar palabras de bienvenida a los estudiantes. <strong>ES OBLIGATORIO</strong></p>
+            <img src="ruta_de_la_imagen/foto_docente.jpg" alt="Foto del Docente">
+            <p><span class="clickable" onclick="window.location='detalle_grabaciones.html'">Grabaciones</span>: Se debe activar el link para docentes TC. <strong>ES OBLIGATORIO</strong></p>
+            <img src="ruta_de_la_imagen/grabaciones_canvas.jpg" alt="Grabaciones en Canvas">
+         </div>
 
-    <h3>COMPONENTES DE APRENDIZAJE</h3>
-    <p>Subir las tareas como trabajo autónomo y trabajo práctico experimental, cada tarea con sus rúbricas respectivas. En las semanas 5, 10 y 16, los reactivos de las evaluaciones. <strong>ES OBLIGATORIO</strong></p>
-    <p>Será calificado. En el caso de no observar en CANVAS, debe indicar en observaciones que no cuenta con ese recurso.</p>
-    <!-- Puede colocar una imagen de tareas o rúbricas -->
-    <img src="ruta_de_la_imagen/tareas_rubricas.jpg" alt="Tareas y rúbricas">
+         <div class="section">
+            <h2>Semana 0</h2>
+            <p><span class="clickable" onclick="window.location='detalle_silabo.html'">Sílabo</span>: Subir legalizado. <strong>ES OBLIGATORIO</strong></p>
+            <img src="ruta_de_la_imagen/silabo.jpg" alt="Sílabo legalizado">
+            <p><span class="clickable" onclick="window.location='detalle_recursos.html'">Recursos Bibliográficos</span>: Subir la bibliografía como básica y complementaria. <strong>ES OBLIGATORIO</strong></p>
+            <img src="ruta_de_la_imagen/bibliografia.jpg" alt="Bibliografía">
+         </div>
 
-    <h3>SEMANAS 6, 11 Y 16</h3>
-    <p>Subir las notas al final de la semana. <strong>ES OBLIGATORIO</strong></p>
-    <p>No es calificado</p>
-    <!-- Puede colocar una imagen representativa de notas en Canvas -->
-    <img src="ruta_de_la_imagen/notas_canvas.jpg" alt="Notas en Canvas">
+         <div class="section">
+            <h2>Semanas 1 a 16</h2>
+            <p><span class="clickable" onclick="window.location='detalle_recursos_aprendizaje.html'">Recursos de Aprendizaje</span>: Subir material como diapositivas, videos, herramientas de gamificación. <strong>ES OBLIGATORIO</strong></p>
+            <img src="ruta_de_la_imagen/recursos_aprendizaje.jpg" alt="Recursos de Aprendizaje">
+            <p><span class="clickable" onclick="window.location='detalle_tareas.html'">Componentes de Aprendizaje</span>: Subir tareas con rúbricas y evaluaciones en las semanas 5, 10 y 16. <strong>ES OBLIGATORIO</strong></p>
+            <img src="ruta_de_la_imagen/tareas_rubricas.jpg" alt="Tareas y Rúbricas">
+         </div>
 
-    <h3>CONFRONTACIÓN DE NOTAS</h3>
-    <p>Solicitar a los estudiantes contestar la encuesta (con el 75% corresponde al 100%). <strong>ES OBLIGATORIO</strong></p>
-    <p>Será calificado. En el caso de no observar en CANVAS, debe indicar en observaciones que no cuenta con ese recurso.</p>
-    <!-- Puede colocar una imagen representativa de una encuesta -->
-    <img src="ruta_de_la_imagen/encuesta.jpg" alt="Encuesta de Confrontación de Notas">
-
-</body>
+         <div class="section">
+            <h2>Confrontación de Notas</h2>
+            <p><span class="clickable" onclick="window.location='detalle_notas.html'">Notas</span>: Subir notas al final de la semana 6, 11 y 16. <strong>ES OBLIGATORIO</strong></p>
+            <img src="ruta_de_la_imagen/notas_canvas.jpg" alt="Notas en Canvas">
+            <p><span class="clickable" onclick="window.location='detalle_encuesta.html'">Encuesta de Confrontación</span>: Los estudiantes deben contestar la encuesta para validar notas. <strong>ES OBLIGATORIO</strong></p>
+            <img src="ruta_de_la_imagen/encuesta.jpg" alt="Encuesta de Confrontación de Notas">
+         </div>
+      </main>
+      <footer>
+         © 2024 - Todos los derechos reservados
+      </footer>
+   </body>
 </html>
