@@ -218,7 +218,7 @@
          <details>
             <summary>Página de Inicio</summary>
             <div class="image-container">
-               <img src="Inicio.png" alt="Imagen de la Página de Inicio">
+               <img src="Inicio.png" alt="Imagen de la Página de Inicio" onclick="openModal(this.src)">
             </div>
             <table>
     <thead>
@@ -259,8 +259,20 @@
             <p>Seguimiento de evaluaciones, notas y confrontación de calificaciones.</p>
          </details>
       </main>
+      <div id="modal" class="modal" onclick="closeModal()">
+         <img id="modal-img" src="">
+      </div>      
       <footer>
          © 2025 - Todos los derechos reservados
       </footer>
+       <script>
+         function openModal(src) {
+             document.getElementById('modal-img').src = src;
+             document.getElementById('modal').classList.add('active');
+         }
+         function closeModal() {
+             document.getElementById('modal').classList.remove('active');
+         }
+      </script>
    </body>
 </html>
